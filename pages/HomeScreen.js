@@ -6,7 +6,7 @@ const HomeScreen = () => {
     return (
       <div className={styles.topSectionContainer}>
         <div className={styles.infoSectionContainer}>
-          <div className={styles.mainTitle}>Let's Redecorate!</div>
+          <div className={styles.mainTitle}>Let&apos;s Redecorate!</div>
           <div className={styles.description}>
             Welcome to Simply Home. We can’t wait to get started showing you how
             to make the most of your living spaces for whatever budget works
