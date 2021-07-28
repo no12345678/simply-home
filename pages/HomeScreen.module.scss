@@ -1,0 +1,214 @@
+@import "../styles/master";
+
+$topSideYellow: #FEF6B2;
+$bottomSideYellow: #FFFCE3;
+
+.topSectionContainer {
+    background-image: linear-gradient($topSideYellow, $bottomSideYellow);
+    width: 100%;
+    padding: 85px 27px;
+
+    .infoSectionContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 23px;
+
+        .mainTitle {
+            font-size: 51px;
+            line-height: 50px;
+            letter-spacing: -0.01em;
+            color: $primaryTextColor;
+        }
+
+        .description {
+            font-size: 18px;
+            line-height: 26px;
+            letter-spacing: 0.109091px;
+            color: $secondaryTextColor;
+        }
+
+        .getStartedButton {
+            height: 45px;
+            width: 208px;
+            background-color: $darkblue;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .getStartedButtonText {
+                font-size: 18px;
+                letter-spacing: 0.109091px;
+                user-select: none;
+            }
+        }
+    }
+}
+
+.secondarySection {
+    padding: 61px 27px;
+    background: url('/images/middle_bg.svg');
+    background-repeat: no-repeat;
+    background-position-x: -200px;
+
+    .keepItSimpleSection {
+        display: flex;
+        flex-direction: column;
+        gap: 23px;
+
+        .title {
+            font-size: 32px;
+        }
+
+        .description {
+            font-size: 18px;
+            line-height: 26px;
+            letter-spacing: 0.109091px;
+            color: $darkblue;
+        }
+
+        .learnMoreButton {
+            background-color: $yellow;
+            border-radius: 6px;
+            height: 41px;
+            width: 172px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: $darkblue;
+
+            .learnMoreButtonText {
+                font-size: 18px;
+                letter-spacing: 0.109091px;
+                user-select: none;
+            }
+        }
+    }
+
+    .simplifyYourHomeSection {
+        margin: 50px 0;
+
+        .homeImage {
+            height: 196px;
+            width: 100%;
+            background: url('/images/photo2.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .detailsSection {
+            display: flex;
+            flex-direction: column;
+            gap: 23px;
+            margin-top: 50px;
+
+            .title {
+                font-size: 32px;
+                letter-spacing: 0.3px;
+            }
+
+            .description {
+                font-size: 18px;
+                line-height: 26px;
+                letter-spacing: 0.109091px;
+                color: $darkblue;
+            }
+
+            .joinFreeButton {
+                background-color: $yellow;
+                border-radius: 6px;
+                height: 41px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                color: $darkblue;
+
+                .joinFreeButtonText {
+                    font-size: 18px;
+                    letter-spacing: 0.109091px;
+                    user-select: none;
+                }
+            }
+        }
+    }
+}
+
+
+.footerSection {
+    padding: 50px 27px;
+    background-color: $secondaryTextColor;
+
+    .logoContainer {
+        display: flex;
+        align-items: center;
+
+        .logoImageContainer {
+            background: url('/images/logo-white.svg');
+            height: 20px;
+            width: 20px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .logoTitle {
+            font-size: 18px;
+            margin-bottom: 4px;
+            margin-left: 11px;
+            color: white;
+        }
+    }
+
+    .footerInfo {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 29px;
+        font-size: 12px;
+        line-height: 18px;
+        color: white;
+        letter-spacing: 0.109091px;
+
+        .address {
+            font-size: 14px;
+        }
+
+        .unsubscribeButton {
+            color: $yellow;
+            cursor: pointer;
+        }
+    }
+
+    .downloadsContainer {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .appStoreButton {
+            background: url('/images/appstore.png');
+            height: 65px;
+            width: 150px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            cursor: pointer;
+        }
+
+        .googlePlayButton {
+            background: url('/images/googleplay.png');
+            height: 65px;
+            width: 150px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            cursor: pointer;
+        }
+    }
+}

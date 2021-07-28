@@ -1,0 +1,44 @@
+@import "../styles/master";
+
+.navbarContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 19px 27px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    .logoContainer {
+        display: flex;
+        align-items: center;
+
+        .logoImageContainer {
+            background: url('/images/logo.svg');
+            height: 30px;
+            width: 30px;
+            background-position: top;
+        }
+
+        .logoTitle {
+            font-size: 18px;
+            margin-bottom: 5px;
+            margin-left: 11px;
+        }
+    }
+
+    .hamburgerMenuContainer {
+        width: 22px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        cursor: pointer;
+
+        .hamburgerMenuLine {
+            height: 3.8px;
+            width: 22px;
+            background-color: $darkblue;
+        }
+    }
+}
