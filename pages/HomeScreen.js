@@ -1,5 +1,6 @@
 import React from "react";
 import * as styles from "./HomeScreen.module.scss";
+import Link from "next/link";
 
 const HomeScreen = () => {
   const renderTopSection = () => {
@@ -13,7 +14,9 @@ const HomeScreen = () => {
             best for you.
           </div>
           <div className={styles.getStartedButton}>
-            <div className={styles.getStartedButtonText}>Get Started</div>
+            <Link href="/SignUpScreen">
+              <a className={styles.getStartedButtonText}>Get Started</a>
+            </Link>
           </div>
         </div>
       </div>
@@ -30,7 +33,9 @@ const HomeScreen = () => {
             decoration. Find out why we’re different.
           </div>
           <div className={styles.learnMoreButton}>
-            <div className={styles.learnMoreButtonText}>Learn More</div>
+            <Link href="/AboutScreen">
+              <a className={styles.learnMoreButtonText}>Learn More</a>
+            </Link>
           </div>
         </div>
         <div className={styles.simplifyYourHomeSection}>
@@ -44,7 +49,9 @@ const HomeScreen = () => {
               modern techniques.
             </div>
             <div className={styles.joinFreeButton}>
-              <div className={styles.joinFreeButtonText}>Join FREE</div>
+              <Link href="/SignUpScreen">
+                <a className={styles.joinFreeButtonText}>Join FREE</a>
+              </Link>
             </div>
           </div>
         </div>

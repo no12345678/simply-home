@@ -7,6 +7,7 @@ import { Collapse } from "react-burgers";
 
 const Layout = ({ children }) => {
   const [isActive, setIsActive] = useState(false);
+  const [firstTimeOpened, setFirstTimeOpened] = useState(false);
 
   const onNavigationItemClick = (navItem) => {
     setTimeout(() => {
@@ -22,6 +23,18 @@ const Layout = ({ children }) => {
     }
   }, [isActive]);
 
+  const getHamburgerMenuAnimation = () => {
+    if (isActive) {
+      return styles.showNavigationMenuAnimation;
+    } else {
+      if (!firstTimeOpened) {
+        return "";
+      } else {
+        return styles.hideNavigationMenuAnimation;
+      }
+    }
+  };
+
   return (
     <>
       <div
@@ -36,7 +49,10 @@ const Layout = ({ children }) => {
           </div>
           <Collapse
             active={isActive}
-            onClick={() => setIsActive((active) => !active)}
+            onClick={() => {
+              setFirstTimeOpened(true);
+              setIsActive((active) => !active);
+            }}
             lineHeight={4}
             lineSpacing={4}
             width={22}
@@ -45,24 +61,31 @@ const Layout = ({ children }) => {
           />
         </div>
         <div
-          className={`${styles.navigationAreaContainer} ${
-            isActive
-              ? styles.showNavigationMenuAnimation
-              : styles.hideNavigationMenuAnimation
-          }`}
+          className={`${styles.navigationAreaContainer}
+          ${getHamburgerMenuAnimation()}
+          `}
         >
-          <span onClick={onNavigationItemClick} className={styles.navigationItem}>
-            <Link href="/HomeScreen">About</Link>
+          <span
+            onClick={onNavigationItemClick}
+            className={styles.navigationItem}
+          >
+            <Link href="/HomeScreen">Home</Link>
           </span>
-          <span onClick={onNavigationItemClick} className={styles.navigationItem}>
-            <Link href="/HomeScreen">Deals</Link>
+          <span
+            onClick={onNavigationItemClick}
+            className={styles.navigationItem}
+          >
+            <Link href="/AboutScreen">About</Link>
           </span>
-          <span onClick={onNavigationItemClick} className={styles.navigationItem}>
+          <span
+            onClick={onNavigationItemClick}
+            className={styles.navigationItem}
+          >
             <Link href="/HomeScreen">Gallery</Link>
           </span>
           <span onClick={onNavigationItemClick} className={styles.signUpButton}>
             <Link href="/SignUpScreen">
-                <a className={styles.signUpButtonText}>Sign Up</a>
+              <a className={styles.signUpButtonText}>Sign Up</a>
             </Link>
           </span>
         </div>

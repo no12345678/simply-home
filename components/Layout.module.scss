@@ -9,6 +9,7 @@
     width: 100%;
     background-color: transparent;
     transition: background-color 400ms;
+    z-index: 1;
 
     &.navbarBackground {
         background-color: $yellow;
