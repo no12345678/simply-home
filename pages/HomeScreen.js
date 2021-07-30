@@ -13,11 +13,11 @@ const HomeScreen = () => {
             to make the most of your living spaces for whatever budget works
             best for you.
           </div>
-          <div className={styles.getStartedButton}>
-            <Link href="/SignUpScreen">
-              <a className={styles.getStartedButtonText}>Get Started</a>
-            </Link>
-          </div>
+          <Link href="/SignUpScreen">
+            <a className={styles.getStartedButton}>
+              <div className={styles.getStartedButtonText}>Get Started</div>
+            </a>
+          </Link>
         </div>
       </div>
     );
@@ -32,11 +32,11 @@ const HomeScreen = () => {
             Learn more about our unique approach to personalized home
             decoration. Find out why we’re different.
           </div>
-          <div className={styles.learnMoreButton}>
-            <Link href="/AboutScreen">
-              <a className={styles.learnMoreButtonText}>Learn More</a>
-            </Link>
-          </div>
+          <Link href="/AboutScreen">
+            <a className={styles.learnMoreButton}>
+              <div className={styles.learnMoreButtonText}>Learn More</div>
+            </a>
+          </Link>
         </div>
         <div className={styles.simplifyYourHomeSection}>
           <div className={styles.homeImage}></div>
@@ -48,11 +48,11 @@ const HomeScreen = () => {
               Let us show you how to make your home more like home with simple,
               modern techniques.
             </div>
-            <div className={styles.joinFreeButton}>
-              <Link href="/SignUpScreen">
-                <a className={styles.joinFreeButtonText}>Join FREE</a>
-              </Link>
-            </div>
+            <Link href="/SignUpScreen">
+              <a className={styles.joinFreeButton}>
+                <div className={styles.joinFreeButtonText}>Join FREE</div>
+              </a>
+            </Link>
           </div>
         </div>
       </div>
