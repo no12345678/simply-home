@@ -1,12 +1,23 @@
-import React from 'react';
+import React from "react";
 import * as styles from "./AboutScreen.module.scss";
+import Lottie from "react-lottie";
+import animationData from '../public/lotties/under-construction';
 
 const AboutScreen = () => {
-    return (
-        <div className={styles.container}>
-            About screen
-        </div>
-    )
-}
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
 
-export default AboutScreen
+  return (
+    <div className={styles.container}>
+      <Lottie options={defaultOptions} height={370} width={370} />
+    </div>
+  );
+};
+
+export default AboutScreen;

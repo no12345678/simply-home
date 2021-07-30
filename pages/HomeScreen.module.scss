@@ -37,6 +37,11 @@ $bottomSideYellow: #FFFCE3;
             display: flex;
             align-items: center;
             justify-content: center;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+            &:active {
+                opacity: 0.7;
+            }
 
             .getStartedButtonText {
                 font-size: 18px;
@@ -79,6 +84,11 @@ $bottomSideYellow: #FFFCE3;
             justify-content: center;
             cursor: pointer;
             color: $darkblue;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+            &:active {
+                opacity: 0.7;
+            }
 
             .learnMoreButtonText {
                 font-size: 18px;
@@ -128,6 +138,11 @@ $bottomSideYellow: #FFFCE3;
                 justify-content: center;
                 cursor: pointer;
                 color: $darkblue;
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+                &:active {
+                    opacity: 0.7;
+                }
 
                 .joinFreeButtonText {
                     font-size: 18px;
@@ -183,6 +198,11 @@ $bottomSideYellow: #FFFCE3;
             color: $yellow;
             cursor: pointer;
             width: 100px;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+            &:active {
+                opacity: 0.7;
+            }
         }
     }
 
@@ -200,6 +220,11 @@ $bottomSideYellow: #FFFCE3;
             background-position: center;
             background-size: contain;
             cursor: pointer;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+            &:active {
+                opacity: 0.7;
+            }
         }
 
         .googlePlayButton {
@@ -210,6 +235,11 @@ $bottomSideYellow: #FFFCE3;
             background-position: center;
             background-size: contain;
             cursor: pointer;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+            &:active {
+                opacity: 0.7;
+            }
         }
     }
 }

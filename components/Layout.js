@@ -81,7 +81,7 @@ const Layout = ({ children }) => {
             onClick={onNavigationItemClick}
             className={styles.navigationItem}
           >
-            <Link href="/HomeScreen">Gallery</Link>
+            <Link href="/AboutScreen">Gallery</Link>
           </span>
           <span onClick={onNavigationItemClick} className={styles.signUpButton}>
             <Link href="/SignUpScreen">
