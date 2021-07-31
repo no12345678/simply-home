@@ -19,6 +19,7 @@ const HomeScreen = () => {
             </a>
           </Link>
         </div>
+        <div className={styles.cactusImage} />
       </div>
     );
   };

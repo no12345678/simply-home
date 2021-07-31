@@ -243,3 +243,30 @@ $bottomSideYellow: #FFFCE3;
         }
     }
 }
+
+@media screen and (min-width: 600px) {
+    .topSectionContainer {
+        padding: 60px 27px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100vh;
+        gap: 20px;
+
+        .infoSectionContainer {
+            flex: 0.5;
+            margin-top: 10px;
+        }
+
+        .cactusImage {
+            margin-top: 10px;
+            height: 85%;
+            width: 350px;
+            background: url('/images/cactus.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+}

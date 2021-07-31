@@ -35,6 +35,29 @@ const Layout = ({ children }) => {
     }
   };
 
+  const renderNavigationItems = () => {
+    return (
+      <>
+        <span onClick={onNavigationItemClick} className={styles.navigationItem}>
+          <Link href="/HomeScreen">Home</Link>
+        </span>
+        <span onClick={onNavigationItemClick} className={styles.navigationItem}>
+          <Link href="/AboutScreen">About</Link>
+        </span>
+        <span onClick={onNavigationItemClick} className={styles.navigationItem}>
+          <Link href="/AboutScreen">Gallery</Link>
+        </span>
+        <span onClick={onNavigationItemClick}>
+          <Link href="/SignUpScreen">
+            <a className={styles.signUpButton}>
+              <div className={styles.signUpButtonText}>Sign Up</div>
+            </a>
+          </Link>
+        </span>
+      </>
+    );
+  };
+
   return (
     <>
       <div
@@ -47,49 +70,32 @@ const Layout = ({ children }) => {
             <div className={styles.logoImageContainer}></div>
             <div className={styles.logoTitle}>simply home</div>
           </div>
-          <Collapse
-            active={isActive}
-            onClick={() => {
-              setFirstTimeOpened(true);
-              setIsActive((active) => !active);
-            }}
-            lineHeight={4}
-            lineSpacing={4}
-            width={22}
-            padding="0"
-            color="#131255"
-          />
+          <div className={styles.navigationContainer}>
+            <div className={styles.hamburgerContainer}>
+              <Collapse
+                active={isActive}
+                onClick={() => {
+                  setFirstTimeOpened(true);
+                  setIsActive((active) => !active);
+                }}
+                lineHeight={4}
+                lineSpacing={4}
+                width={22}
+                padding="0"
+                color="#131255"
+              />
+            </div>
+            <div className={styles.navigationItemsContainer}>
+              {renderNavigationItems()}
+            </div>
+          </div>
         </div>
         <div
           className={`${styles.navigationAreaContainer}
           ${getHamburgerMenuAnimation()}
           `}
         >
-          <span
-            onClick={onNavigationItemClick}
-            className={styles.navigationItem}
-          >
-            <Link href="/HomeScreen">Home</Link>
-          </span>
-          <span
-            onClick={onNavigationItemClick}
-            className={styles.navigationItem}
-          >
-            <Link href="/AboutScreen">About</Link>
-          </span>
-          <span
-            onClick={onNavigationItemClick}
-            className={styles.navigationItem}
-          >
-            <Link href="/AboutScreen">Gallery</Link>
-          </span>
-          <span onClick={onNavigationItemClick}>
-            <Link href="/SignUpScreen">
-              <a className={styles.signUpButton}>
-                <div className={styles.signUpButtonText}>Sign Up</div>
-              </a>
-            </Link>
-          </span>
+          {renderNavigationItems()}
         </div>
       </div>
       <div>{children}</div>

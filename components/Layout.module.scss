@@ -38,6 +38,57 @@
                 margin-left: 11px;
             }
         }
+
+        .navigationContainer {
+            display: flex;
+            align-items: center;
+
+            .hamburgerContainer {
+                &>button {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            .navigationItemsContainer {
+                display: none;
+
+                .navigationItem {
+                    display: flex;
+                    font-size: 18px;
+                    line-height: 29px;
+                    letter-spacing: 0.109091px;
+
+                    &:active {
+                        opacity: 0.7;
+                    }
+                }
+
+                .signUpButton {
+                    height: 34px;
+                    width: 96px;
+                    border-radius: 25.5px;
+                    background-color: black;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+                    &:active {
+                        opacity: 0.7;
+                    }
+
+                    .signUpButtonText {
+                        font-weight: bold;
+                        font-size: 18px;
+                        letter-spacing: 0.109091px;
+                        color: white;
+                        margin-bottom: 4px;
+                    }
+                }
+            }
+        }
     }
 
     .navigationAreaContainer {
@@ -118,5 +169,23 @@
     to {
         height: 0;
         opacity: 0;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .navbarContainer {
+        .topSectionContainer {
+            .navigationContainer {
+                .hamburgerContainer {
+                    display: none;
+                }
+
+                .navigationItemsContainer {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                }
+            }
+        }
     }
 }
